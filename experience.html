@@ -10,16 +10,22 @@
 
 <header>
   <div class="nav">
-    <div class="brand">Isaiah Kol</div>
-    <nav class="navlinks">
+    <a class="brand" href="index.html">Isaiah Kol</a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      ☰
+    </button>
+
+    <nav id="site-nav" class="navlinks">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
       <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
       <a href="resume.html">Resume</a>
       <a href="about.html">About</a>
     </nav>
   </div>
 </header>
+
 
 <main class="container">
   <h1>Experience</h1>
@@ -96,6 +102,17 @@
   </section>
 
 </main>
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.navlinks');
+
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+</script>
 
 </body>
 </html>
