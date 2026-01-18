@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Isaiah Kol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Isaiah Kol</div>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>About</h1>
+  <p class="lead">
+    I’m a mechanical engineering student interested in hands-on design, fabrication,
+    and building systems that work reliably in the real world.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Interests</h3>
+      <p>Prototyping, CAD/DFM, manufacturing, and mechanical systems.</p>
+    </div>
+    <div class="card">
+      <h3>Goals</h3>
+      <p>Internships focused on design, manufacturing, and applied engineering.</p>
+    </div>
+    <div class="card">
+      <h3>Contact</h3>
+      <p>Add your email and LinkedIn here.</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
