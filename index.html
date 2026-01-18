@@ -1,49 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <meta charset="UTF-8">
-  <title>Isaiah Kol | Mechanical Engineering Student</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
-    nav {
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      margin-top: 1.2em;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Name — Engineering Student</title>
+    <meta name="description" content="Portfolio template for an engineering student. Replace content with your details." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">Your Name</a>
+        <nav class="nav" id="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
-</nav>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Hi — I’m <span class="accent">Your Name</span></h1>
+            <p class="lead">Engineering student building reliable systems, neat UIs, and everything in between. This is a minimal, dark portfolio template — edit freely.</p>
+            <p class="cta-row">
+              <a class="btn primary" href="#projects">See projects</a>
+              <a class="btn outline" href="#contact">Get in touch</a>
+            </p>
+            <ul class="meta-list">
+              <li><strong>Field:</strong> Software / Systems / Embedded</li>
+              <li><strong>Location:</strong> Your City, Country</li>
+            </ul>
+          </div>
+          <div class="hero-card">
+            <div class="avatar" aria-hidden="true">YN</div>
+            <div class="card-body">
+              <h3>Current status</h3>
+              <p>Student @ University • Open to internships & freelance projects</p>
+              <p class="muted">Replace this card with a photo and short bio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<h1>Isaiah Kol</h1>
-<p><strong>Mechanical engineering student.</strong></p>
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p class="muted">Short summary about yourself. Mention your interests, what technologies you enjoy, and what you're learning. Keep it concise.</p>
+        </div>
+      </section>
 
-<p>
-Focused on hands-on design, fabrication, and practical problem-solving.
-</p>
+      <section id="projects" class="section dark">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Project One</h3>
+              <p class="muted">Brief description of the project — tech stack, role, link to repo or demo.</p>
+              <p class="card-actions"><a class="link" href="#">View repo</a> · <a class="link" href="#">Live demo</a></p>
+            </article>
 
-</body>
-</html>
+            <article class="project-card">
+              <h3>Project Two</h3>
+              <p class="muted">Brief description. Replace with your project details and images if you like.</p>
+              <p class="card-actions"><a class="link" href="#">View repo</a></p>
+            </article>
 
-</body>
+            <article class="project-card">
+              <h3>Project Three</h3>
+              <p class="muted">Another short blurb about a project.</p>
+              <p class="card-actions"><a class="link" href="#">View repo</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skill-list">
+            <span class="skill">C / C++</span>
+            <span class="skill">Python</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Embedded Systems</span>
+            <span class="skill">Web Development</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section dark">
+        <div class="container contact-grid">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">I prefer email — replace with your address or a contact form integration.</p>
+            <p><a class="btn primary" href="mailto:you@example.com">you@example.com</a></p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul class="muted">
+              <li><a class="link" href="#">Resume (PDF)</a></li>
+              <li><a class="link" href="#">GitHub</a></li>
+              <li><a class="link" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Your Name — Built with a minimal dark template. Replace text and images to personalize.</p>
+      </div>
+    </footer>
+
+    <script src="/assets/scripts.js"></script>
+  </body>
 </html>
