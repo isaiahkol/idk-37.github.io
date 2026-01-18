@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Isaiah Kol | Mechanical Engineering Student</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
-    nav {
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      margin-top: 1.2em;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Isaiah Kol | Mechanical Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
-</nav>
+<header>
+  <div class="nav">
+    <div class="brand">Isaiah Kol</div>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
 
-<h1>Isaiah Kol</h1>
-<p><strong>Mechanical engineering student.</strong></p>
+<main class="container">
+  <section class="hero">
+    <h1>Mechanical engineering student.</h1>
+    <p class="lead">Hands-on design, fabrication, and practical problem-solving.</p>
 
-<p>
-Focused on hands-on design, fabrication, and practical problem-solving.
-</p>
+    <div class="actions">
+      <a class="btn" href="projects.html">View Projects</a>
+      <a class="btn secondary" href="resume.html">View Resume</a>
+    </div>
+  </section>
+
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <a class="card" href="projects.html#fablab" style="text-decoration:none; color:inherit;">
+      <h3>FabLab Prototyping & Operations</h3>
+      <p>3D printing support, workflow improvements, and lab reliability.</p>
+      <div class="meta">CAD • Manufacturing • Process improvement</div>
+    </a>
+
+    <a class="card" href="projects.html#cad" style="text-decoration:none; color:inherit;">
+      <h3>SolidWorks Mechanical Design</h3>
+      <p>Assemblies, drawings, and iterative design for manufacturability.</p>
+      <div class="meta">SolidWorks • DFM • Documentation</div>
+    </a>
+
+    <a class="card" href="projects.html#robotics" style="text-decoration:none; color:inherit;">
+      <h3>Robotics (Junior–Senior Year)</h3>
+      <p>Mechanical subsystem design, prototyping, and integration.</p>
+      <div class="meta">Mechanisms • Rapid iteration • Team integration</div>
+    </a>
+  </div>
+</main>
 
 </body>
 </html>
