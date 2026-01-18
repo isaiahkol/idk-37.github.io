@@ -310,6 +310,7 @@ iframe.pdf{
   .hero-headshot{
     width: min(360px, 92vw);
     aspect-ratio: 1 / 1;   /* square-ish on mobile */
+    max-width: 360px;
   }
 }
 @media (max-width: 620px){
