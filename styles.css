@@ -308,12 +308,15 @@ iframe.pdf{
 }
 @media (max-width: 620px){
   .hero-headshot{
-    width: min(360px, 92vw);
-    aspect-ratio: 1 / 1;   /* square-ish on mobile */
-    max-width: 360px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 1 / 1;
   }
 }
+
 @media (max-width: 620px){
   .badges{ margin-top: 10px; }
   .actions.center{ margin-top: 12px !important; }
 }
+.hero{ overflow: hidden; }
