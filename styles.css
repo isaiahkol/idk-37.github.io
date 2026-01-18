@@ -320,3 +320,46 @@ iframe.pdf{
   .actions.center{ margin-top: 12px !important; }
 }
 .hero{ overflow: hidden; }
+/* Media carousel (horizontal scroll) */
+.carousel{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding: 10px 4px 14px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar{
+  height:10px;
+}
+.carousel::-webkit-scrollbar-thumb{
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.slide{
+  flex: 0 0 auto;
+  width: min(720px, 92%);
+  scroll-snap-align: center;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.slide img,
+.slide video{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Optional caption under each slide */
+.caption{
+  padding:10px 12px;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+}
