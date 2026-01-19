@@ -382,7 +382,7 @@ iframe.pdf{
 }
 
 .project-card img{
-  object-fit: contain;
-  background: #0b0d12;
-  /* crop, don’t stretch */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* crop, don’t stretch */
 }
