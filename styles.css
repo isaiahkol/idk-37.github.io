@@ -376,3 +376,13 @@ iframe.pdf{
   height: auto;
   display: block;
 }
+/* Project thumbnails sizing */
+.project-card{
+  height: 200px;              /* target height */
+}
+
+.project-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* crop, don’t stretch */
+}
