@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars Marble Run | Isaiah Kol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="../index.html">Isaiah Kol</a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      ☰
+    </button>
+
+    <nav id="site-nav" class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- TITLE -->
+  <h1>Star Wars Marble Run</h1>
+  <p class="lead">
+    For Advanced 3D Drafting course (taken Fall '25), designed Star Wars themed marble run in SolidWorks, then fabricated it through the UVM FabLab. 
+  </p>
+
+<div class="carousel" aria-label="Project media carousel">
+  <!-- Image -->
+  <figure class="slide">
+    <img src="../images/marble1.jpg" alt="">
+    <figcaption class="caption">The final marble run at the end of the semester.</figcaption>
+  </figure>
+
+  <!-- Video -->
+  <figure class="slide">
+    <video controls preload="metadata">
+      <source src="../media/StarWarsMarbleRunFinal.mp4" type="video/mp4">
+    </video>
+    <figcaption class="caption">Test run of the marble run. Note: elevator and launcher are both slow processes. </figcaption>
+  </figure>
+</div>
+
+  <h2>Overview & Problem</h2>
+  <p>
+    The UVM FabLab recently acquired a Filabot Filament Recycler, so that we can reuse the material from failed or discarded prints.
+    Since we use primarily Bambu Labs printers, we have many empty Bambu spools lying around, but unfortunately the stock attachment
+    on the spooler module is designed for their own proprietary spools. It seemed foolish to invest in a filament recycler and then buy proprietary
+    spools to use it, so I took on this project.
+  </p>
+
+  <!-- SOLUTION -->
+  <h2>Solution</h2>
+  <p>
+    I designed a simple alternate attachment for the spooler (removing the stock one proved only minimally invasive) to work with Bambu,
+    or really any other brand of spool with a similar internal diameter. Rather than the stock design which utilized a specific protrusion
+    which fit into their spools, I opted for a threaded cylinder with a large wing nut style retainer. Finger-tight with my design was perfectly
+    sufficient for eliminating the risk of spool slippage, and unlike the original design, there was now no risk of the spool being pulled off 
+    by the traverse mechanism and unraveling on the floor.
+  </p>
+
+  <!-- PROCESS -->
+  <h2>Design & Process</h2>
+  <p>
+    When I was first presented with this problem by the Operations Manager, I immediately took several photos of the spooler unit from all
+    angles to clearly see where I would have interference to consider, and then took down basic dimensions. I then procured the .STL for the
+    stock attachment, and printed a copy on my personal printer. Between the pictures, measurements, and physical duplicate I had just made,
+    I was definetly in a good place to open up solidworks and begin drafting my own rendition. After experimenting with modifying the original
+    fitting to remove the protrusion that blocked Bambu spools, I settled on just making my own version. I kept the retaining flanges and remade
+    the center mounting design to ensure compatibility, but i replaced the tapered prongs with a threaded cylinder and large wing nut to keep the 
+    spool locked in place. Once I was happy with the design, I printed it in PETG and hooked it up to the spooler.
+  </p>
+
+  <!-- TOOLS -->
+  <h2>Tools & Skills</h2>
+  <p>
+    CAD (SolidWorks) • 3D Printing • Prototyping • Fabrication • Testing
+  </p>
+
+  <!-- RESULTS -->
+  <h2>Outcome</h2>
+  <p>
+    Overall, the attachment worked quite well! It fit perfectly onto the spooler unit, and when I put a Bambu spool on and set it up, I was able to
+    successfully respool some loose filament we had. However, the threads were a little sticky, so I went back and adjusted tolerances, and I also
+    increased infill from 15% to 20% as it felt like you could break it if you really tightened it as much as you could. After that, I set it
+    back up and that is still what we have running on the Filabot. In a future rendition, I would like to reprint with multiple materials.
+    I think if the first few layers of the wing nut were TPU 90A, I think it would have better grip on the spool and generally improve the design.
+  </p>
+
+  <!-- BACK LINK -->
+  <p style="margin-top:40px;">
+    ← <a href="../projects.html">Back to Projects</a>
+  </p>
+
+</main>
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.navlinks');
+
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+</script>
+</body>
+</html>
