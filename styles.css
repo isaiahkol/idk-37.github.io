@@ -376,13 +376,43 @@ iframe.pdf{
   height: auto;
   display: block;
 }
-/* Project thumbnails sizing */
+/* Project tiles */
 .project-card{
-  height: 100px;              /* target height */
+  display:block;
+  position:relative;
+  height: 200px;              /* set your tile height */
+  border-radius: 14px;
+  overflow:hidden;
+  border: 1px solid var(--border);
+  background: var(--panel);
 }
 
 .project-card img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* crop, don’t stretch */
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.project-card .overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding: 12px 12px;
+  background: rgba(0,0,0,0.55);
+}
+
+.project-card h3{
+  margin:0;
+  font-size: 16px;
+  color: var(--text);
+}
+
+/* Nice hover */
+.project-card:hover{
+  transform: translateY(-1px);
+}
+.project-card{
+  transition: transform 120ms ease;
 }
