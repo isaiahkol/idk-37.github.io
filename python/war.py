@@ -1,6 +1,6 @@
 """
 Final Project: War (Card Game)
-Isaiah Kol & Asher Kaufman
+Isaiah Kol
 CS 1210-D
 """
 
@@ -144,3 +144,4 @@ if __name__ == "__main__":
     deck = make_deck(RANKS.keys(), SUITS)
     (p_deck, c_deck) = split_deck(deck)
     play_war(p_deck, c_deck, round_lim)
+
