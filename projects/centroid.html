@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Centroid Calculator (Python) | Isaiah Kol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="../vendor/github-dark.min.css">
+  <script defer src="../vendor/highlight.min.js"></script>
+  <script defer src="../vendor/python.min.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="../index.html">Isaiah Kol</a>
+    <nav class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Compound Shape Centroid Calculator</h1>
+
+  <p class="lead">
+    Compound shape centroid calculator, made for extra credit in my Statics course.
+  </p>
+
+  <div class="actions" style="margin-bottom:16px;">
+    <a class="btn" href="../python/centroid.py" download>Download .py</a>
+  </div>
+
+  <pre class="codeblock"><code id="code-centroid" class="language-python"></code></pre>
+
+  <p style="margin-top:22px;">
+    ← <a href="../projects.html">Back to Projects</a>
+  </p>
+</main>
+
+<script>
+  window.addEventListener("load", async () => {
+    const res = await fetch("../python/centroid.py", { cache: "no-store" });
+    const text = await res.text();
+    const el = document.getElementById("code-centroid");
+    el.textContent = text;
+    hljs.highlightElement(el);
+  });
+</script>
+
+</body>
+</html>
