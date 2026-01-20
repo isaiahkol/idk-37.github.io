@@ -416,3 +416,15 @@ iframe.pdf{
 .project-card{
   transition: transform 120ms ease;
 }
+pre.codeblock{
+  padding:14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:#0b0d12;
+  overflow:auto;
+}
+pre.codeblock code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size:13px;
+  line-height:1.55;
+}
