@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Statics Tool (Python) | Isaiah Kol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="../index.html">Isaiah Kol</a>
+    <nav class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Statics Extra Credit Tool</h1>
+
+  <p class="lead">
+    <!-- EDIT THIS -->
+    Python program written for a statics assignment to compute geometric properties
+    and reinforce centroid calculations through a command-line interface.
+  </p>
+
+  <div class="actions" style="margin-bottom:16px;">
+    <a class="btn" href="../python/IsaiahKol_StaticsExtraCredit.py" download>Download .py</a>
+    <a class="btn secondary"
+       href="../python/IsaiahKol_StaticsExtraCredit.py"
+       target="_blank">View raw</a>
+  </div>
+
+  <pre class="codeblock">
+    <code id="code-statics" class="language-python"></code>
+  </pre>
+
+  <p style="margin-top:22px;">
+    ← <a href="../projects.html">Back to Projects</a>
+  </p>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/python.min.js"></script>
+
+<script>
+  async function loadCode(){
+    const res = await fetch("../python/IsaiahKol_StaticsExtraCredit.py");
+    const text = await res.text();
+    const el = document.getElementById("code-statics");
+    el.textContent = text;
+    hljs.highlightElement(el);
+  }
+  loadCode();
+</script>
+
+</body>
+</html>
