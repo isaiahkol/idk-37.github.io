@@ -9,7 +9,8 @@
   <!-- Syntax highlighting -->
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
-  <style>.hljs-keyword{ color: #ff0000 !important; }</style>
+  <script defer src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/python.min.js"></script>
 
 </head>
 
@@ -40,31 +41,32 @@
     <a class="btn" href="../python/war.py" download>Download .py</a>
   </div>
 
-  <pre class="codeblock">
-    <code id="code-war" class="language-python"></code>
-  </pre>
+  <pre class="codeblock"><code id="code-war" class="language-python"></code></pre>
+
 
   <p style="margin-top:22px;">
     ← <a href="../projects.html">Back to Projects</a>
   </p>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/python.min.js"></script>
-
 <script>
   async function loadCode(){
-    const res = await fetch("../python/war.py");
+    const res = await fetch("../python/war.py", { cache: "no-store" });
     const text = await res.text();
     const el = document.getElementById("code-war");
     el.textContent = text;
 
-    // If hljs failed to load, this prevents a crash
-    if (window.hljs) hljs.highlightElement(el);
+    // Highlight after content is inserted
+    if (window.hljs) {
+      hljs.highlightElement(el);
+    } else {
+      console.error("hljs not loaded");
+    }
   }
 
   window.addEventListener("DOMContentLoaded", loadCode);
 </script>
+
 
 
 </body>
