@@ -443,3 +443,27 @@ pre.codeblock code{
   height: 100%;
   border: 0;
 }
+/* Base (default) video: 16:9 */
+.video-wrapper{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px; /* optional, matches your cards */
+}
+
+.video-wrapper iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Vertical (Shorts/Reels): 9:16 */
+.video-wrapper.video-vertical{
+  padding-bottom: 177.78%; /* 16/9 * 100 = 177.78% */
+  max-width: 360px;        /* keeps it from being hilariously tall */
+  margin: 0 auto;          /* centers it */
+}
