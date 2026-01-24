@@ -463,7 +463,7 @@ pre.codeblock code{
 
 /* Vertical (Shorts/Reels): 9:16 */
 .video-wrapper.video-vertical{
-  padding-bottom: 177.78%; /* 16/9 * 100 = 177.78% */
+  padding-bottom: 142%; /* 16/9 * 100 = 177.78% */
   max-width: 360px;        /* keeps it from being hilariously tall */
   margin: 0 auto;          /* centers it */
 }
