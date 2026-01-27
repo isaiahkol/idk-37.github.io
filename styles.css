@@ -467,3 +467,72 @@ pre.codeblock code{
   max-width: 360px;        /* keeps it from being hilariously tall */
   margin: 0 auto;          /* centers it */
 }
+/* Collapsible experience tiles */
+.exp-tile {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  margin: 18px 0;
+  overflow: hidden;
+}
+
+.exp-tile__summary {
+  list-style: none;           /* removes default marker in some browsers */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  user-select: none;
+}
+
+.exp-tile__summary::-webkit-details-marker {
+  display: none;              /* removes default triangle in Chrome/Safari */
+}
+
+.exp-tile__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.exp-tile__meta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Custom chevron */
+.exp-tile__summary::after {
+  content: "▸";
+  font-size: 1.1rem;
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.exp-tile[open] .exp-tile__summary::after {
+  content: "▾";
+}
+
+.exp-tile__body {
+  padding: 0 20px 18px 20px;
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.exp-box {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px) {
+  .exp-grid {
+    grid-template-columns: 1fr;
+  }
+}
