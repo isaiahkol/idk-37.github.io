@@ -536,46 +536,84 @@ pre.codeblock code{
     grid-template-columns: 1fr;
   }
 }
-/* Promotion / role timeline */
+/* Header row inside the experience tile (title + right-side logo) */
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.exp-title {
+  margin: 0;
+}
+
+.exp-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  opacity: 0.95;
+}
+
+/* Timeline */
 .role-timeline {
-  position: relative;
-  margin: 16px 0 24px 0;
-  padding-left: 28px;
+  margin-top: 10px;
 }
 
-.timeline-line {
-  position: absolute;
-  left: 8px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: rgba(255, 255, 255, 0.15);
-}
-
+/* Each entry is a 2-col grid: gutter (line+dot) + content */
 .timeline-item {
+  display: grid;
+  grid-template-columns: 18px 1fr; /* gutter width + content */
+  column-gap: 14px;
+  align-items: start;
+}
+
+/* Gutter draws the dot and the vertical line segment */
+.timeline-gutter {
   position: relative;
   display: flex;
-  gap: 16px;
-  padding: 8px 0 16px 0;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2px; /* small tweak for vertical alignment */
+}
+
+/* Make line and dot SAME color */
+:root {
+  --timeline-color: rgba(255, 255, 255, 0.55); /* change if you want brighter */
 }
 
 .timeline-dot {
-  position: absolute;
-  left: -2px;
-  top: 12px;
   width: 10px;
   height: 10px;
-  background: #ffffff;
-  border-radius: 50%;
+  border-radius: 999px;
+  background: var(--timeline-color);
+  display: block;
+  margin-top: 4px; /* centers dot with first line of text */
 }
 
-.timeline-content h4 {
-  margin: 0;
-  font-size: 0.95rem;
+/* The vertical line segment that continues downward */
+.timeline-stem {
+  width: 2px;
+  background: var(--timeline-color);
+  flex: 1;
+  margin-top: 6px; /* attaches to dot nicely */
+  min-height: 18px; /* ensures a visible stem even if text is short */
+}
+
+/* Content text */
+.timeline-content {
+  padding-bottom: 14px; /* spacing between items */
+}
+
+.timeline-role {
   font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.25;
 }
 
 .timeline-meta {
-  font-size: 0.8rem;
+  margin-top: 2px;
+  font-size: 0.82rem;
   opacity: 0.7;
 }
