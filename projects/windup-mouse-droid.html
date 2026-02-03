@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars Marble Run | Isaiah Kol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  
+<header>
+  <div class="nav">
+    <a class="brand" href="../index.html">Isaiah Kol</a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      ☰
+    </button>
+
+    <nav id="site-nav" class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- TITLE -->
+  <h1>Star Wars Wind-Up Mouse Droid</h1>
+  <p class="lead">
+    For Advanced 3D Drafting course (taken Fall '25), designed Star Wars Mouse Droid in SolidWorks with functional wind-up mechanism.
+  </p>
+
+<div class="carousel" aria-label="Project media carousel">
+  <!-- Image -->
+  <figure class="slide">
+    <img src="../images/marble1.jpg" alt="">
+    <figcaption class="caption">The final marble run at the end of the semester.</figcaption>
+  </figure>
+
+
+
+</div>
+
+<p>
+For this project, I decided to make the mouse droid from Star Wars. Going into the project, I wanted a real design challenge and planned from the start to make it suitable for 3D printing. The assignment requirement was to model and assemble any wheeled object in SolidWorks, and the default option many students selected was an existing Razor scooter. Instead, I created a fully custom assembly with a working internal drivetrain.
+
+While the exterior geometry is fairly simple, that was exactly why I chose to develop the internal systems as well. I designed a wind-up mechanism so the model would not only meet the wheeled-vehicle requirement, but actually move like one. To make that possible — in addition to the outer casing, wheels, and undercarriage — I built a compact, low-profile wind-up gearbox inside the body. The mechanism includes a ratchet and pawl, spiral torsion spring, gear train, and wind-up key, allowing the model to run under stored spring energy.
+
+Because the assignment required no use of the SolidWorks toolbox, all gears were created manually. I sized tooth counts and diameters so the gears would mesh correctly and worked directly with pitch, pressure angle, and proportional relationships between mating gears. The drivetrain geometry was built from these parameters rather than prebuilt features.
+
+Although only a completed CAD assembly was required, I also iteratively 3D printed the parts in PETG to verify tolerances, fit, and mechanism performance in physical hardware. All components were designed with FDM print constraints and assembly clearances in mind. The final result is a functional, spring-powered mouse droid with a fully modeled and tested internal drive system. 
+</p>
+
+  <!-- BACK LINK -->
+  <p style="margin-top:40px;">
+    ← <a href="../projects.html">Back to Projects</a>
+  </p>
+
+</main>
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.navlinks');
+
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+</script>
+</body>
+</html>
