@@ -1,6 +1,6 @@
 (function () {
   function setupCarousel(root) {
-    const items = Array.from(root.querySelectorAll(".window img, .window video"));
+    const items = Array.from(root.querySelectorAll(".window > *"));
     const prev = root.querySelector("[data-prev]");
     const next = root.querySelector("[data-next]");
     const counter = root.querySelector("[data-counter]");
