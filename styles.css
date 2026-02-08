@@ -724,3 +724,51 @@ main.container > section.card {
   position: relative;
   z-index: 2;
 }
+/* === FORCE carousel slides to stack + only active is clickable === */
+
+.media-carousel .window{
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* every direct child of .window is a "slide" */
+.media-carousel .window > *{
+  position: absolute !important;
+  inset: 0 !important;              /* top:0; right:0; bottom:0; left:0 */
+  width: 100% !important;
+  height: 100% !important;
+
+  opacity: 0 !important;
+  pointer-events: none !important;  /* KEY: prevents invisible iframe stealing clicks */
+}
+
+/* only the active slide shows + is clickable */
+.media-carousel .window > *.active{
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Make media fill the slide */
+.media-carousel .window img,
+.media-carousel .window video,
+.media-carousel .window iframe{
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+/* optional: choose contain vs cover */
+.media-carousel .window img{
+  object-fit: contain !important;
+}
+
+/* ensure controls are above slides */
+.media-carousel .controls{
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* give the window a consistent shape (pick one) */
+.media-carousel .window{
+  aspect-ratio: 16 / 9 !important; /* or replace with height: 500px !important; */
+}
